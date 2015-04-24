@@ -1,0 +1,4 @@
+/build-*
+/viewer
+*moc_*.cpp
+*.pro.user
