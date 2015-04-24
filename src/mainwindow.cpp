@@ -26,9 +26,9 @@ MainWindow::MainWindow()
     d->ui.splitter->insertWidget(0, d->q);
 
 
-    connect(d->ui.refresh, &QToolButton::clicked, this, &MainWindow::refresh);
-    connect(d->ui.save, &QToolButton::clicked, this, &MainWindow::save);
-    connect(d->ui.exit, &QToolButton::clicked, qApp, &QApplication::quit);
+    connect(d->ui.refresh, &QPushButton::clicked, this, &MainWindow::refresh);
+    connect(d->ui.save, &QPushButton::clicked, this, &MainWindow::save);
+    connect(d->ui.exit, &QPushButton::clicked, qApp, &QApplication::quit);
     auto cc = static_cast<void(QComboBox::*)(const QString&)>(&QComboBox::currentTextChanged);
     connect(d->ui.folders, cc, this, &MainWindow::save);
 
@@ -51,6 +51,8 @@ MainWindow::MainWindow()
     connect(d->refresh, &QAction::triggered, this, &MainWindow::refresh);
     addAction(d->refresh);
 
+    d->q->engine()->addImportPath(qApp->applicationDirPath());
+    qDebug() << d->q->engine()->importPathList();
     d->dir = QDir(qApp->applicationDirPath() + "/examples");
     refresh();
 }

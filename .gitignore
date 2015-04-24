@@ -1,4 +1,5 @@
 /build-*
-/viewer
+/viewer*
 *moc_*.cpp
 *.pro.user
+/QtQuick.2

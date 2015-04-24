@@ -30,7 +30,7 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
-          <widget class="QToolButton" name="refresh">
+          <widget class="QPushButton" name="refresh">
            <property name="text">
             <string>목록 갱신</string>
            </property>
@@ -47,14 +47,14 @@
           </widget>
          </item>
          <item>
-          <widget class="QToolButton" name="save">
+          <widget class="QPushButton" name="save">
            <property name="text">
             <string>저장</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QToolButton" name="exit">
+          <widget class="QPushButton" name="exit">
            <property name="text">
             <string>종료</string>
            </property>

@@ -166,7 +166,13 @@ QmlEdit::QmlEdit(const QString &file, QWidget *parent)
 {
     d->file = file;
     load();
+#ifdef Q_OS_LINUX
     QFont font("monospace");
+#elif defined(Q_OS_WIN)
+    QFont font("Gulimche");
+#elif defined(Q_OS_MAC)
+    QFont font("Monaco");
+#endif
     font.setPointSize(20);
 //    font.setFixedPitch(true);
     setFont(font);

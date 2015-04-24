@@ -1,4 +1,4 @@
-import QtQuick 2.2
+import QtQuick 2.0
 
 /* 프로퍼티 바인딩
 

@@ -9,7 +9,12 @@ SOURCES += main.cpp \
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
 
-CONFIG += c++11 debug_and_release
+CONFIG += c++11
+
+contains(CONFIG,static) {
+LIBS *= -LC:/msys64/mingw64/qt5-static/share/qt5/qml/QtQuick.2
+QTPLUGIN *= qtquick2plugin
+}
 
 TARGET = viewer
 DESTDIR = ../

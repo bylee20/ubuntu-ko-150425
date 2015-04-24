@@ -10,7 +10,7 @@ QML은 다른 언어에서도 많이 이용되는 다음의 두가지
   줄
 주석 */
 
-import QtQuick 2.2
+import QtQuick 2.0
 /* import 구문
 
 import 모듈 major.minor
