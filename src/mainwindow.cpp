@@ -32,7 +32,7 @@ MainWindow::MainWindow()
     auto cc = static_cast<void(QComboBox::*)(const QString&)>(&QComboBox::currentTextChanged);
     connect(d->ui.folders, cc, this, &MainWindow::save);
 
-    resize(1024, 768);
+    resize(1000, 600);
 
     d->q->setFixedWidth(200);
 
