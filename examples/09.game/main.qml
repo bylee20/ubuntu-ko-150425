@@ -64,25 +64,20 @@ Rectangle {
 				function reverse() { reverser.start() }
 				SequentialAnimation {
 					id: reverser
-					NumberAnimation {
-						target: card; property: "rotation"
-						from: 0; to: 5; duration: 50
-					}
-					NumberAnimation {
-						target: card; property: "rotation"
-						to: -5; duration: 100
-					}
-					NumberAnimation {
-						target: card; property: "rotation"
-						to: 5; duration: 50
-					}
-					NumberAnimation {
-						target: card; property: "rotation"
-						to: -5; duration: 50
-					}
-					NumberAnimation {
-						target: card; property: "rotation"
-						to: 0; duration: 50
+					SequentialAnimation {
+						loops: 3
+						NumberAnimation {
+							target: card; property: "rotation"
+							from: 0; to: 5; duration: 25
+						}
+						NumberAnimation {
+							target: card; property: "rotation"
+							to: -5; duration: 50
+						}
+						NumberAnimation {
+							target: card; property: "rotation"
+							to: 0; duration: 25
+						}
 					}
 					PropertyAction { target: card; property: "enabled"; value: true }
 					PropertyAction { target: card; property: "front"; value: false }
